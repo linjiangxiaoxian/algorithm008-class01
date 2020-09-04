@@ -3,7 +3,23 @@
 此前仅仅是本科用C语言进行嵌入式开发，而后研究生阶段用python进行人工智能方面的开发和研究。两个语言都学得不是很深，浅尝辄止。也许关于知识点本身，我的认识不会太到位，仅仅总结一些自己在代码方面的觉得精彩的地方吧。
 ***
 经典代码总结：
-1. 移动零（LeetCode编号：283）   
+1. 移动零（LeetCode编号：283）
+
+python版解法：  
+```
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        j = 0
+        for i in nums:
+            if i == 0:
+                pass
+            else:
+                nums[j] = i
+                j += 1
+        for i in range(j,len(nums)):
+            nums[i] = 0
+```  
+
 方法一：这是入门级的题目，开始的时候没有什么经验，就采用的最为暴力的方法。  
 ```
 void moveZeroes(int* nums, int numsSize){
